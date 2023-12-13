@@ -1,0 +1,17 @@
+
+<div class="flex justify-center">
+      <h1 class="font-bold me-3 text-white block lg:flex">Filter:</h1>  
+<div class="flex items-center me-4">
+    <input checked id="green-radio" [(ngModel)]="selected" (change)="onfilterChanged()" type="radio" name="filter" value="all" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="green-radio" class="ms-2 text-sm font-thin whitespace-nowrap text-gray-900 dark:text-gray-300">All ({{all}})</label>
+</div>
+<div class="flex items-center me-4">
+    <input id="purple-radio" [(ngModel)]="selected" (change)="onfilterChanged()" type="radio" name="filter" value="true" class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="purple-radio" class="ms-2 text-sm font-thin whitespace-nowrap text-gray-900 dark:text-gray-300">In Stock ({{inStock}})</label>
+</div>
+<div class="flex items-center me-4">
+    <input  id="teal-radio" [(ngModel)]="selected" (change)="onfilterChanged()" type="radio" name="filter" value="false" class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="teal-radio" class="ms-2 text-sm font-thin whitespace-nowrap text-gray-900 dark:text-gray-300">Out of Stock ({{outStock}})</label>
+</div>
+
+</div>

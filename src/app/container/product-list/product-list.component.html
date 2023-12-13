@@ -1,0 +1,17 @@
+<section class="text-gray-600 body-font">
+   <div class="container py-16 mx-auto">
+<div class="container lg:mx-20 mb-5 " *ngIf="!notFound">
+   <app-filter [all]="totalProduct" [inStock]="stock" [outStock]="outStock" (selectedFilter)="onfilterChanged($event)"></app-filter>
+
+</div>
+
+      <div class="flex flex-wrap gap-5  px-2 lg:px-0 justify-center align-middle ">
+         <ng-container *ngFor="let product of products"  >
+            <app-product *ngIf=" displayProduct(product)"  [product]="product"></app-product>
+         
+            <!-- <app-product  *ngIf=" selected==='all' || product.is_in_inventory.toString()===selected" [product]="product"></app-product> -->
+         </ng-container>
+      </div>
+      <div class="text-white text-center" *ngIf="notFound || products.length<1">No products available.</div>
+   </div>
+</section>

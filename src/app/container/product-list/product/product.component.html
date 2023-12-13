@@ -1,0 +1,25 @@
+
+        <div class="lg:w-full md:w-1/2 w-full relative  rounded  hover:shadow-lg  hover:scale-x-105  hover:touch-pan-x transition duration-500 shadow-lg bg-[#1f2937]" >
+         
+            <span class="absolute z-10 end-0 bg-yellow-100 text-yellow-800 text-xs font-medium my-1 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-yellow-300 border border-yellow-300 text-end" *ngIf="product.discountPrice">{{(100 - product.discountPrice / product.price * 100) | number:'1.2-2' }}$ OFF</span>
+            <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block hover:scale-125 hover:touch-pan-x transition duration-500 hover:cursor-zoom-in " (error)="showErrorimg($event)" [src]="product.imageURL">
+         
+        </a>
+          <div class="mt-4 px-3 py-3">
+            <div class="flex justify-between ">
+              <h3 class="text-gray-500 text-xs tracking-widest title-font ">{{product.category}}</h3>
+              <p class="font-bold text-white">{{product.price}}$</p>
+            </div>
+            <div class="flex justify-between my-2">
+
+           <p class=" text-white"> {{product.brand}}</p>
+          <small [ngStyle]="{background:product.is_in_inventory?'green':'red'}" class="bg-yellow-500 px-3 end-0 text-base rounded text-white">{{product.is_in_inventory ? 'Available' : 'Not available'}}</small>
+            </div>
+           <h2 class="text-slate-400 mt-2 title-font text-lg font-medium truncate line-clamp-1 whitespace-normal w-56" title="{{product.name}}">{{product.name}}</h2>
+
+          
+          <p class="mb-2"> {{product.color.length}} Colors . Best Seller</p>
+            <p class="mt-1 truncate line-clamp-2 whitespace-normal w-56 text-justify" title="{{product.description}}">{{product.description}}</p>
+          </div>
+        </div>

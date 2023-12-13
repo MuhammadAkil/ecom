@@ -1,0 +1,28 @@
+    <a href="{{ link }}" class="text-3xl font-bold text-blue-500 hover:underline">
+        {{ title }}
+   </a>
+    <div class=" mt-4 rounded bg-white">
+        <div class="p-4 text-center py-2">
+            <div class="text-3xl font-bold">
+                {{ votes }}
+            </div>
+            <div class="text-black">
+                Points
+            </div>
+           <hr> 
+        <ul class="flex mt-4">
+            <li class="mx-5">
+                <button (click)="voteUp()" class="text-gray-600 btn btn- hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(195, 177, 177);"><path d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-15 5 5h-4v5h-2v-5H7l5-5z"></path></svg> Upvote
+                </button>
+            </li>
+            <li>
+                <button (click)="voteDown()" class="text-gray-600 btn hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(203, 190, 190);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15-5-5h4V7h2v5h4l-5 5z"></path></svg> Downvote
+                </button>
+            </li>
+        </ul>
+        </div>
+    </div>
+   
+    
